@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="{% url 'index' %}" class="nav-button">Home</a></li>
+                <li><a href="{% url 'about' %}" class="nav-button">About</a></li>
+                <li><a href="{% url 'contact' %}" class="nav-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <div class="contact-item"> Visit us:
+                    <a href="https://www.google.com/maps/place/Fort+Jesus+Museum/@-4.0672884,39.682765,15z/data=!4m6!3m5!1s0x184013559fde16d1:0x2ca213f81093aea!8m2!3d-4.0622784!4d39.6795769!16zL20vMDJxaGht?entry=ttu" target="_blank">Bamburi</a>
+                </div>
+                <div class="contact-item"> Call us on:
+                    <a href="tel:+254748450060" target="_blank">(254)+748450060</a>
+                </div>
+                <div class="contact-item"> Email us:
+                    <a href="mailto:linetngina097@gmail.com" target="_blank">linetngina097@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

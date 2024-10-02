@@ -1,0 +1,126 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    /* Body styles */
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    }
+    
+    /* Header styles */
+    header {
+    background-color: #333;
+    color: #fff;
+    padding: 16px; /* Changed from 1rem to 16px */
+    text-align: center;
+    }
+    
+    header h1 {
+    margin-bottom: 8px; /* Changed from 0.5rem to 8px */
+    }
+    
+    /* Navigation styles */
+    .navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    }
+    
+    .navbar li {
+    display: inline-block;
+    margin-right: 16px; /* Changed from 1rem to 16px */
+    }
+    
+    .navbar li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px; /* Changed from 0.5rem 1rem to 8px 16px */
+    transition: background-color 0.3s ease;
+    }
+    
+    .navbar li a:hover {
+    background-color: #555;
+    }
+    
+    /* Main content styles */
+    .main-content {
+    padding: 32px; /* Changed from 2rem to 32px */
+    min-height: 60vh; /* Adjust as needed */
+    }
+    
+    /* Footer styles */
+    .footer {
+    background-color: #ff6f00; /* Orange color */
+    color: #fff;
+    padding: 16px; /* Changed from 1rem to 16px */
+    text-align: center;
+    margin-top: 32px; /* Changed from 2rem to 32px */
+    }
+    
+    .footer p {
+    margin-bottom: 0;
+    }
+    
+    /* Contact info styles */
+    .contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+    }
+    
+    .contact-item {
+    margin-bottom: 16px; /* Changed from 1rem to 16px */
+    }
+    
+    .contact-item a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    .contact-item a:hover {
+    text-decoration: underline;
+    }
+    
+    /* Container styles */
+    .container {
+    margin-top: 16px; /* Changed from 1rem to 16px */
+    }
+    
+    /* Apply styles to the footer-container */
+    .footer-container {
+    background-color: #1a237e; /* Dark blue color */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    }
+    
+    /* Style the contact-info section */
+    .contact-info {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    /* Style the contact-item */
+    .contact-item {
+    margin-bottom: 10px;
+    }
+    
+    /* Style the links within the contact-item */
+    .contact-item a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none;
+    }
+    
+    /* Hover effect for links */
+    .contact-item a:hover {
+    text-decoration: underline;
+    }
+    
+    

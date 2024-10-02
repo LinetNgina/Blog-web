@@ -1,0 +1,51 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <div class="contact-content">
+        <div class="contact-section">
+            <h2>Get in Touch with Us</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                <table class="contact-table">
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telephone">Telephone Number:</label></td>
+                        <td><input type="tel" id="telephone" name="telephone" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="location">Location:</label></td>
+                        <td><input type="text" id="location" name="location" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="message">Your Message:</label></td>
+                        <td><textarea id="message" name="message" rows="4" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" class="contact-button">Send Message</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-container">
+        <div class="contact-info">
+            <div class="contact-item"> Visit us:
+                <a href="https://www.google.com/maps/place/Fort+Jesus+Museum/@-4.0672884,39.682765,15z/data=!4m6!3m5!1s0x184013559fde16d1:0x2ca213f81093aea!8m2!3d-4.0622784!4d39.6795769!16zL20vMDJxaGht?entry=ttu" target="_blank" class="contact-button">Bamburi</a>
+            </div>
+            <div class="contact-item"> Call us on:
+                <a href="telto:(254)+7 48450060" target="_blank">(254)+7 48450060</a>
+            </div>
+            <div class="contact-item"> Email us:
+                <a href="mailto:linetngina097@gmail.com" target="_blank">linetngina097@gmail.com</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

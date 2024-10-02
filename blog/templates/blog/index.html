@@ -1,0 +1,37 @@
+<!-- blog/templates/blog/index.html -->
+{% extends "blog/base.html" %}
+
+{% block title %}Home - My Blog{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Blog</h1>
+
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! You are logged in.</p>
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+
+    <h2>Welcome to My Blog</h2>
+    <p>We provide a platform where people can access updates and events, and also share pictures about various events. Our site is dedicated to keeping you informed and connected.</p>
+
+    <div>
+        <p>{{ posts.title }}</p>
+        <p>{{ posts.content }}</p>
+        <p>{{ posts.created_at }}</p>
+    </div>
+
+    <!-- Content for latest posts -->
+    <h2>Latest Posts</h2>
+    <p>Excited to explore the top and trending posts? Worry not we got you covered.</p>
+
+    <div>
+        {% for post in posts %}
+            <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+            <p>{{ post.content|truncatewords:30 }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
+
